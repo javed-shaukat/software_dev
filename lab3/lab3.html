@@ -68,13 +68,13 @@
     <tr>
         <th>Total Sales</th>
         <td align="center">$600</td>
-        <td align="center">$675</td>
+        <td align="center" bgcolor="lightpink">$675</td>
     </tr>
 </table>
 <br><br>
-<table width="400" height="120" bgcolor="light green">
-    <tr bgcolor="gray"</tr>
-    <th> Dancing Course Fee </th>
+<table width="400" height="120" bgcolor="light green" border="1">
+    <tr bgcolor="lightgray"</tr>
+    <th colspan="2">Dancing Course Fee</th>
     </tr>
     <tr>
     <th>Adult, 18+ years-old</th>
@@ -84,8 +84,11 @@
         <th>Teen, between 10 and 17 years-old</th>
         <td align="center">$135.55</td>
     </tr>
+    <tr>
+        <td align="center" colspan="2" bgcolor="white">Pay with cash or credit?</td>
+    </tr>
 </table>
-<h2>Images</h2>
+<h2 id="imageslink">Images</h2>
 <hr>
 <img src="images/nyc.jpg" alt="Image of New York City" width="300px" title="Visit New York City">
 <img src="images/nyc.jpg" alt="Image of New York City" width="300px" title="Visit New York City">
@@ -95,7 +98,8 @@
     <figcaption>I Love NYC -- 2025</figcaption>
 </figure>
 
-<h2>Links</h2>
+<h2 id="links">Links</h2>
+<hr>
 <p>Link to open an external website</p>
 <p>Visit <a href="https://www.qcc.cuny.edu/" target="_blank" rel="noopener noreferrer">QCC Website</a>  for more information!</p>
 
@@ -104,14 +108,54 @@
 
 <p><em>Link from an image</em></p>
 <figure>
+<a href="https://www.niagarafallsstatepark.com/" target="_blank" rel="noopener noreferrer">
+<img src="images/niagarafalls1.jpg" alt="Image of Niagara Falls" width="300px" title="Visit Niagara Falls, NY">
+<figure>
+    <a href="https://www.niagarafallsstatepark.com/" target="_blank" rel="noopener noreferrer">
+
+    </a>
 
 </figure>
-<img src="images/nyc.jpg" alt="Image of New York City" width="300px" title="Visit New York City">
-<figure>
-    <a href="https://www.nyc.gov/" target="_blank" rel="noopener noreferrer">
-        
-    </a>
+
+<br>
+<p>Connect Niagara Falls State Park Social Media</p>
+<a href="https://www.facebook.com/NiagaraFallsStateParkUSA/" target="_blank" rel=""noopener noreferrer">
+<img src="images/facebookicon.png" alt="Connect with Niagara Falls State Park via Facebook" title="Niagara Falls USA" width="50px"
+</a>
+
+<a href="https://www.instagram.com/niagarafalls_statepark/" target="_blank" rel="noopener noreferrer"
+<img src="images/instagramicon.png" alt="Connect with Niagara falls State Park via Instagram" title="Niagara Falls USA" width="50px"
+</a>
 </figure>
+<br>
+<p id="places"><em>Link to an internal/local webpage</em></p>
+<p>Niagara Falls State Park, NY, USA:</p>
+<ul>
+    <li><a href="niagarafalls1.html">Niagara Falls 1</a></li>
+    <li><a href="niagarafalls2.html">Niagara Falls 2</a></li>
+</ul>
+<br>
+<p><em>image mapping</em></p>
+<figure>
+    <img src="images/niagarafalls3.jpg" alt="Picture of Niagara Falls" width="500px" title="Visit Niagara Falls State Park"
+    usemap="#Niagara_Falls">
+    <figcaption>I Love Niagara Falls State Park</figcaption>
+</figure>
+<!--Define Map-->
+<map name="Niagara Falls State Park"
+<area shape="rect" coords="200,150,300,250" href="niagarafalls1.html" alt="Link to Niagara Falls Webpage"
+</map>
+
+<br><br>
+<p><em>Link to a specific section of the same webpage</em></p>
+<nav>
+    <a href="#">Go to the beginning</a>
+    <span>|</span>
+    <a href="#tables">Tables</a>
+    <span>|</span>
+    <a href="#imageslink">Images</a>
+    </nav>
+    
 </body>
 
 </html>
