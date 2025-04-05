@@ -4,8 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 3 Exercise</title>
+
+<head>
+    <title>Beautiful Lakes Around the World</title>
+    <style>
+        table { border-collapse: collapse; }
+        th, td { padding: 8px; border: 1px solid black; }
+        .blue-bg { background-color: lightblue; }
+        .green-bg { background-color: lightgreen; }
+        footer { text-align: center; }
+    </style>
 </head>
 <body>
-    
+
+<header>
+    <h1>Exploring Beautiful Lakes</h1>
+    <nav>
+        <ul>
+            <li><a href="#famous-lakes">Famous Lakes</a></li>
+            <li><a href="#lake-facts">Lake Facts</a></li>
+            <li><a href="#lake-types">Lake Types</a></li>
+            <hr style="border: 1px solid grey; width: 100%;">
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Famous Lakes Gallery</h2>
+    <section id="famous-lakes">
+        
+        <figure>
+            <img src="images/laketahoe.jpg" height="200" width="200" alt="Lake Tahoe" >
+            <figcaption><a href="https://en.wikipedia.org/wiki/Lake_Tahoe" target="_blank">Lake Tahoe</a></figcaption>
+        </figure>
+        <figure>
+            <img src="images/craterlake.jpg" height="200" width="200" alt="Crater Lake">
+            <figcaption><a href="https://en.wikipedia.org/wiki/Crater_Lake" target="_blank">Crater Lake</a></figcaption>
+        </figure>
+        <figure>
+            <img src="images/lakecomo.jpg" height="200" width="200" alt="Lake Como">
+            <figcaption><a href="https://en.wikipedia.org/wiki/Lake_Como" target="_blank">Lake Como</a></figcaption>
+        </figure>
+        <figure>
+            <img src="images/greatsaltlake.jpg" height="200" width="200" alt="Great Salt Lake">
+            <figcaption><a href="https://en.wikipedia.org/wiki/Great_Salt_Lake" target="_blank">Great Salt Lake</a></figcaption>
+        <style>
+            #famous-lakes{ 
+                display: flex;
+                flex-wrap: wrap;  
+            }
+         </style>
+        </figure>
+    </section>
+
+    <section id="lake-facts">
+        <hr style="border: 1px solid grey; width: 100%;">
+        <h2>Lake Facts</h2>
+        <dl>
+            <dt><strong><em>Largest Lake:</em></strong></dt>
+            <dd>Caspian Sea (though technically a lake)</dd>
+            
+            <dt><strong><em>Deepest Lake:</em></strong></dt>
+            <dd>Lake Baikal in Russia</dd>
+            
+            <dt><strong><em>Highest Lake:</em></strong></dt>
+            <dd>Ojos del Salado in Chile/Argentina</dd>
+        </dl>
+    </section>
+
+    <section id="lake-types">
+        <hr style="border: 1px solid grey; width: 100%;">
+        <h2>Types of Lakes</h2>
+        <table>
+            <tr>
+                <th colspan="2"><strong>Lake Classification</strong></th>
+            </tr>
+            <tr>
+                <th class="blue-bg">Type</th>
+                <th class="blue-bg">Example</th>
+            </tr>
+            <tr>
+                <td class="green-bg">Glacial</td>
+                <td class="green-bg">Great Lakes</td>
+            </tr>
+            <tr>
+                <td>Volcanic</td>
+                <td>Crater Lake</td>
+            </tr>
+            <tr>
+                <td class="green-bg">Tectonic</td>
+                <td class="green-bg">Lake Baikal</td>
+            </tr>
+        </table>
+
+        <h3>Other Lake Features:</h3>
+        <ul>
+            <li>Freshwater lakes</li>
+            <li>Saltwater lakes</li>
+            <li>Artificial lakes</li>
+            <li>Oxbow lakes</li>
+        </ul>
+    </section>
+
+    <section>
+        <hr style="border: 1px solid grey; width: 100%;">
+        <h2>Visit These Lakes</h2>
+        <p>
+            <a href="https://www.google.com/maps/place/Lake+Tahoe" target="_blank">View Lake Tahoe on Google Maps</a>
+        </p>
+        <p>
+            <a href="https://www.google.com/maps/place/Crater+Lake+National+Park/@42.9358479,-122.1355578,11z/data=!3m1!4b1!4m6!3m5!1s0x54c6170840e5e339:0x902bf2e1452fe3a3!8m2!3d42.9294762!4d-122.1279394!16zL20vMDE3eXk0?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D" target="_blank">View Crater Lake on Google</a>
+        </p>
+        <p>
+            <a href="https://www.google.com/maps/place/Lake+Como/@45.9918338,8.8958454,10z/data=!3m1!4b1!4m6!3m5!1s0x47843d32820b62f7:0x3e40c4eae898e1e0!8m2!3d46.0160486!4d9.2571676!16zL20vMDFsNHNt?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D" target="_blank">View Lake Como on Google Maps</a>
+        </p>
+        <p>
+            <a href="https://www.google.com/maps/place/Lake+Como/@45.9918338,8.8958454,10z/data=!3m1!4b1!4m6!3m5!1s0x47843d32820b62f7:0x3e40c4eae898e1e0!8m2!3d46.0160486!4d9.2571676!16zL20vMDFsNHNt?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D" target="_blank">View Great Salt Lake on Google Maps</a>
+        </p>
+        <hr style="border: 1px solid grey; width: 100%;">
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 Lakes Exploration Project. All rights reserved.</p>
+    <p>Contact: info@lakesexploration.com</p>
+</footer>
+
 </body>
 </html>
