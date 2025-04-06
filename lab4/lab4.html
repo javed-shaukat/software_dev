@@ -26,7 +26,7 @@
     <p id="intro">CSS (Cascading Style Sheet) allows you to create rules that specify how the content of an element should appear. CSS (Cascading Style Sheet) allows you to create rules that specify how the content of an element should appear.</p>
     <p>CSS (Cascading Style Sheet) allows you to create rules that specify how the content of an element should appear. CSS (Cascading Style Sheet) allows you to create rules that specify how the content of an element should appear.</p>
     <p class="author">By: Javed Shaukat</p>
-    <h2 class="author">Typology</h2>
+    <h2 class="author" id="Typology">Typology</h2>
     <p class="author">Styling Text</p>
     <p class="fontweight">Paragraph with font-weight bold</p>
     <p class="fontstyle">Paragraph with font style</p>
@@ -61,7 +61,7 @@
     <div class="radiusbox4">Box 4</div>
     <div class="radiusbox5">Box 5</div>
     
-    <h2 class="subtitle">Basic Image Formatting</h2>
+    <h2 class="subtitle" id="images">Basic Image Formatting</h2>
     <img class="blossoming blossom1" src="images/img1.jpg" alt="images of a blossom tree">
     <img class="blossoming blossom2" src="images/img1.jpg" alt="images of a blossom tree">
     <img class="blossoming blossom3" src="images/img1.jpg" alt="images of a blossom tree">
@@ -111,19 +111,18 @@
     <figure class="images">Images Container</figure>
 </main>
 
-<h2>Cards</h2>
+<h2 id="Cards">Cards</h2>
     <section class="cardcontainer">
         <div class="card">
             <img class="imgcard" src="images/img1.jpg" alt="image of a blossom tree">
             <a class="linkcard" href="https://www.bbg.org/collections/cherries" target="_blank" rel="noopener noreferrer">Visit Blossom Garden</a>
-
         </div>
 
         <div class="card">
             <img class="imgcard" src="images/img1.jpg" alt="image of a blossom tree">
             <a class="linkcard" href="https://www.bbg.org/collections/cherries" target="_blank" rel="noopener noreferrer">Visit Blossom Garden</a>
-
         </div>
+
         <div class="card2">
             <img class="imgcard" src="images/img1.jpg" alt="image of a blossom tree">
             <h2 class="cardtitle">Brooklyn Botanical Garden</h2>
@@ -145,10 +144,58 @@
             <a class="linkcard2" href="https://www.bbg.org/collections/cherries" target="_blank" rel="noopener noreferrer">Visit Blossom Garden</a>
         </div>
     </section>
-    
-</body>
-</html>
+
+    <h2 class="subtitle">Navigation Tabs</h2>
+    <ul class="navbar">
+        <li><a href="">Home</a></li>
+        <li><a href="#Typology">Topology</a></li>
+        <li><a href="#images">images</a></li>
+        <li><a href="#cards">Cards</a></li>
+    </ul>
+
+    <nav class="navbarhorizontal fixedtabs">
+        <a href="#">Home</a>
+        <a href="#Typology">Topology</a>
+        <a href="#images">images</a>
+        <a href="#cards">Cards</a>
+    </nav>
+    <h2 class="subtitle">Colors</h2>
+    <h3>RGB value</h3>
+    <section class="rgbcontainer">
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <h3>hex code</h3>
+    <section class="hexcontainer">
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+<h2 class="subtitle">Positions</h2>
+<div class="imagecontainer">
+    <img src="images/img1.jpg" alt="image of a blossom tree">
+    <p class="imgtitle">Brooklyn Botanical Garden</p>
+</div>
+
+<h2 class="subtitle">Background Image</h2>
+<section class="imagebackground">
+
 </section>
 
+<h2>Hero image with liner-gradient</h2>
+<section class="heroimgcontainer">
+    <div class="herocontent">
+        <h3 class="herocontent_title">Brooklyn Botanical Garden</h3>
+        <p class="herocontent_intro">Spring cherries blossom collections</p>
+        <a class="herocontent_link" href="https://www.bbg.org/collections/cherries" target="_blank" rel="noopener noreferrer">More Info</a>
+    </div>
+</section>
+<nav class="navbarhorizontal fixedtabs">
+        <a href="#">Home</a>
+        <a href="#Typology">Topology</a>
+        <a href="#images">images</a>
+        <a href="#cards">Cards</a>
+    </nav>
 </body>
 </html>
