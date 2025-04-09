@@ -58,4 +58,31 @@ img{width: 100%; display: block}
     transform: translateY(-10px);
     box-shadow: 0px 5px 10px black;
 }
-
+/* flex container */
+.flexcontainer{
+    background-color: lightsalmon;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: center;
+}
+/* Grid Layout */
+.gridcontainer{
+    display: grid;
+    grid-template-columns: 2fr 1fr 5fr;
+    grid-template-rows: 3fr 1fr;
+    gap: 10px;
+    background-color: antiquewhite;
+    height: 500px;
+}
+.item{
+    background-color: aqua;
+    text-align: center;
+    padding: 20px;
+    border: solid black 1px;
+}
+.gridsection{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
