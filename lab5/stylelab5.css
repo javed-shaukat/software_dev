@@ -86,3 +86,66 @@ img{width: 100%; display: block}
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+/* More Grid Properties */
+.sectioncontainer{
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "sidebar content content"
+    "footer footer footer"
+    ;
+}
+.header, .sidebar, .content, .footer{
+    padding: 2rem;
+    text-align: center;
+}
+.header{
+    background-color: aqua;
+    grid-area: header;
+}
+.sidebar{
+    background-color: blueviolet;
+}
+.content{
+    background-color: greenyellow;
+    grid-area: content;
+}
+.footer{
+    background-color: pink;
+    grid-area: footer;
+}
+/* Navigation Tabs */
+.navcontainer{
+    position: fixed;
+    top: 0%;
+    background-color: rgba(50, 50, 50, 0.7);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.navlink{
+    text-align: center;
+    padding: 1rem;
+    display: inline-block;
+    color: white;
+}
+.collapsenavbars{
+    display: none;
+    padding: 1rem;
+    color: aliceblue
+}
+/* Media Queries */
+@media only screen and (max-width: 1150px) {
+    .flexcontainer{background-color: aqua;}
+    .cardslide{width: 500px;}
+    .gridcontainer{
+        grid-template-columns: 3fr 2fr;          
+    }
+}
+@media only screen and (max-width: 800px){
+    .flexcontainer{background-color: purple;}
+    .cardslide{width: 90%; margin: 5%}
+    .gridcontainer{grid-template-columns: 1fr;}
+    .collapsenavbars{display: inline-block;}
+    .navbars{display: none;}    
+}    
