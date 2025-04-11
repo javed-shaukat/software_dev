@@ -3,15 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 4 Exercise</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Yamaha Motorcycle Ads</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+       
+        .ad-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+       
+        .ad-image {
+            width: 800px;
+            height: 500px;
+            margin: 15px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+       
+        /* First Image - Invert Filter */
+        .invert-ad {
+            background-image: url(images/YamahaR1.JPG);
+            filter: invert(15%);
+        }
+       
+        .invert-caption {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 20px;
+            border-top: 3px solid #f00;
+            font-size: 28px;
+            text-align: center;
+        }
+       
+        /* Second Image - Blur Filter */
+        .blur-ad {
+            background-image: url(images/YamahaMT07.jpg);
+            filter: blur(3px);
+        }
+       
+        .blur-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.85);
+            color: #000;
+            padding: 25px;
+            font-size: 32px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            border-radius: 5px;
+            width: 70%;
+        }
+       
+        .blur-link {
+            display: inline-block;
+            background-color: #f00;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 15px;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+       
+        .blur-link:hover {
+            background-color: #c00;
+        }
+       
+        /* Third Image - Gradient Filter */
+        .gradient-ad {
+            background-image:
+                linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)),
+                url(images/YamahaTENERE.jpg);
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+        }
+       
+        .gradient-title {
+            color: #fff;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+       
+        .gradient-paragraph {
+            color: #fff;
+            margin: 15px 0;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+       
+        .para1 { width: 80%; font-size: 18px; }
+        .para2 { width: 65%; align-self: flex-start; font-size: 16px; }
+        .para3 { width: 75%; align-self: flex-end; font-size: 17px; }
+    </style>
 </head>
 <body>
-    <h1>Javed Shaukat</h1>
-    <section class="exercisecontainer">
-        <div class="img1"></div>
-        <div class="img2"></div>
-        <div class="img3"></div>
-    </section>
+    <div class="ad-container">
+        <!-- First Advertisement - Yamaha R1 -->
+        <div class="ad-image invert-ad">
+            <div class="invert-caption">
+                Yamaha YZF-R1: The Pinnacle of Sport Bike Engineering
+            </div>
+        </div>
+       
+        <!-- Second Advertisement - Yamaha MT-07 -->
+        <div class="ad-image blur-ad">
+            <div class="blur-caption">
+                Yamaha MT-07<br>
+                Raw. Naked. Adrenaline.
+                <a href="#" class="blur-link">Schedule a Test Ride</a>
+            </div>
+        </div>
+       
+        <!-- Third Advertisement - Yamaha Tenere -->
+        <div class="ad-image gradient-ad">
+            <h2 class="gradient-title">Yamaha Tenere 700: Conquer Any Terrain</h2>
+            <p class="gradient-paragraph para1">The Tenere 700 combines rugged off-road capability with legendary Yamaha reliability, making it the ultimate adventure motorcycle.</p>
+            <p class="gradient-paragraph para2">With its 689cc CP2 engine and lightweight chassis, you'll experience power and precision whether you're on pavement or dirt.</p>
+            <p class="gradient-paragraph para3">Built for explorers who demand performance without compromise. Where will your adventure take you?</p>
+        </div>
+    </div>
 </body>
 </html>
