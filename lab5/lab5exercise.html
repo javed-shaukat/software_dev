@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Wonders</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+       
+        body {
+            background-color: #e6f7ff;
+            color: #003366;
+        }
+       
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #0066cc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+       
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+       
+        .title {
+            text-align: right;
+            padding: 10px;
+        }
+       
+        .title h1 {
+            font-family: 'Verdana', sans-serif;
+            font-size: 2.5rem;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+       
+        /* Navigation styles */
+        nav {
+            width: 100%;
+            background-color: #004d99;
+        }
+       
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+       
+        nav ul li {
+            flex: 1;
+            text-align: center;
+        }
+       
+        nav ul li a {
+            display: inline-block;
+            padding: 15px 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+       
+        nav ul li a:hover {
+            background-color: #0088ff;
+            color: #ffffff;
+        }
+       
+        /* Introduction section */
+        .intro-section {
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+       
+        .intro-image {
+            flex: 1;
+            padding: 10px;
+        }
+       
+        .intro-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            border: 3px solid #0066cc;
+        }
+       
+        .intro-text {
+            flex: 1;
+            padding: 20px;
+            text-align: right;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #003366;
+        }
+       
+        /* Content sections */
+        .content-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+       
+        article {
+            width: 30%;
+            margin: 15px 0;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 51, 102, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #cce6ff;
+        }
+       
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 102, 204, 0.3);
+            background-color: #f0f9ff;
+        }
+       
+        article img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 2px solid #0066cc;
+        }
+       
+        article p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+            color: #003366;
+        }
+       
+        article a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+       
+        article a:hover {
+            text-decoration: underline;
+            color: #004d99;
+        }
+       
+        /* Footer */
+        footer {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/Ocean.avif" alt="Ocean Logo">
+        </div>
+        <div class="title">
+            <h1>Ocean Wonders</h1>
+        </div>
+    </header>
+   
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Marine Life</a></li>
+            <li><a href="#">Conservation</a></li>
+            <li><a href="#">Explore</a></li>
+        </ul>
+    </nav>
+   
+    <section class="intro-section">
+        <div class="intro-image">
+            <img src="images/corelreef1.jpeg" alt="Coral Reef">
+        </div>
+        <div class="intro-text">
+            <p>Dive into the fascinating world of our oceans. Covering more than 70% of the Earth's surface, oceans are home to incredible biodiversity and play a crucial role in regulating our climate. Explore the mysteries of the deep, learn about marine conservation efforts, and discover the beauty of underwater ecosystems.</p>
+        </div>
+    </section>
+   
+    <section class="content-section">
+        <article>
+            <img src="images/corelreef2.jpg" alt="Coral Reef">
+            <p>Coral reefs are among the most diverse ecosystems on Earth, often called the "rainforests of the sea." They occupy less than 0.1% of the world's ocean surface yet support 25% of all marine species.</p>
+            <a href="#">Learn about coral reefs</a>
+        </article>
+       
+        <article>
+            <img src="images/whale.jpeg" alt="Whale">
+            <p>Whales are magnificent marine mammals that play a key role in the health of marine environments. The blue whale is the largest animal ever known to have existed, reaching lengths of up to 100 feet.</p>
+            <a href="#">Discover marine mammals</a>
+        </article>
+       
+        <article>
+            <img src="images/deepsea.jpg" alt="Deep sea">
+            <p>The deep sea is Earth's largest habitat, yet it remains one of the least explored. The Mariana Trench is the deepest known part of the world's oceans, reaching depths of nearly 11,000 meters.</p>
+            <a href="#">Explore the deep sea</a>
+        </article>
+    </section>
+   
+    <section class="content-section">
+        <article>
+            <img src="images/oceanpollution.jpg" alt="Ocean pollution">
+            <p>Ocean pollution is one of the greatest environmental challenges of our time. Every year, about 8 million tons of plastic waste escapes into the oceans from coastal nations.</p>
+            <a href="#">Learn about conservation</a>
+        </article>
+       
+        <article>
+            <img src="images/shark.jpg" alt="Shark">
+            <p>Sharks have existed for over 400 million years, long before dinosaurs. These apex predators are crucial for maintaining the balance of marine ecosystems.</p>
+            <a href="#">Shark conservation</a>
+        </article>
+       
+        <article>
+            <img src="images/oceancurrents.jpg" alt="Ocean currents">
+            <p>Ocean currents are continuous, directed movements of seawater generated by forces acting upon this mean flow, such as breaking waves, wind, the Coriolis effect, and temperature differences.</p>
+            <a href="#">Understand ocean currents</a>
+        </article>
+    </section>
+   
+    <footer>
+        <p>&copy; 2025 Ocean Wonders | Dedicated to marine conservation and education</p>
+    </footer>
+</body>
+</html>
