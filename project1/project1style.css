@@ -1,0 +1,169 @@
+/* Updated Color Variables */
+:root {
+    --primary-green: #01411C;       /* Dark green (Pakistan flag) */
+    --secondary-green: #046A38;     /* Medium green */
+    --light-green: #9BDFEC;         /* Light green/teal (Pakistan flag) */
+    --pure-white: #FFFFFF;
+    --off-white: #F9F9F9;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--off-white);
+}
+
+h1, h2, h3 {
+    font-family: 'Noto Sans Arabic', sans-serif;
+    color: var(--primary-green);
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(rgba(2, 110, 17, 0.945), rgba(0, 0, 0, 0.3)), 
+                url('../images/header-bg.jpg');
+    background-size: cover;
+    color: var(--pure-white);
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-green);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--primary-green);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li a {
+    color: var(--pure-white);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    background-color: var(--secondary-green);
+    color: var(--pure-white);
+}
+
+/* Main Content Sections */
+main {
+    background-color: var(--pure-white);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    border: 3px solid var(--primary-green);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-text {
+    background-color: rgba(1, 65, 28, 0.8); /* Semi-transparent dark green */
+    color: var(--pure-white);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--secondary-green);
+    color: var(--pure-white);
+    border: 2px solid var(--pure-white);
+}
+
+.btn:hover {
+    background-color: var(--primary-green);
+}
+
+/* Table Styling */
+table {
+    border: 2px solid var(--primary-green);
+}
+
+th {
+    background-color: var(--primary-green);
+    color: var(--pure-white);
+}
+
+tr:nth-child(even) {
+    background-color: var(--off-white);
+}
+
+/* Image Styling */
+.float-right {
+    border: 3px solid var(--primary-green);
+    box-shadow: 0 4px 8px rgba(1, 65, 28, 0.2);
+}
+
+/* Famous Items Grid */
+.famous-item {
+    background: var(--pure-white);
+    border: 1px solid var(--secondary-green);
+}
+
+.famous-item h3 {
+    color: var(--primary-green);
+    background-color: var(--off-white);
+    padding: 1rem;
+    border-bottom: 1px solid var(--secondary-green);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-green);
+    color: var(--pure-white);
+    border-top: 5px solid var(--secondary-green);
+}
+
+.external-links a {
+    color: var(--light-green);
+}
+
+.external-links a:hover {
+    color: var(--pure-white);
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(4, 106, 56, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(4, 106, 56, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(4, 106, 56, 0);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Hover Effects */
+.famous-item:hover {
+    box-shadow: 0 8px 16px rgba(1, 65, 28, 0.2);
+    transform: translateY(-5px);
+}
+
+img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.05);
+}
