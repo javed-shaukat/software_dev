@@ -6,6 +6,7 @@
     <title>About Pakistan - Discover Pakistan</title>
     <link rel="stylesheet" href="project1style.css">
     <style>
+      
         /* Add styles for tabs */
         nav ul {
             display: flex;
@@ -28,35 +29,135 @@
             border: 1px solid transparent;
             border-bottom: none;
         }
+        
+            nav ul li a.active {
+        background-color: green; /* Set background color to green */
+        border: 1px solid #ccc;
+        border-bottom: 2px solid green; /* Match the bottom border with the background */
+        color: white; /* Set text color to white for better contrast */
+    }
 
-        nav ul li a.active {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-bottom: 2px solid #fff;
-            color: #000;
-        }
-
-        nav ul li a:hover {
-            background-color: #ddd;
-            color: #000;
-        }
+    nav ul li a:hover {
+        background-color: green;
+        color: #000;
+    }         
+        
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>About Pakistan</h1>
+  <header style="background-color: green; color: white; text-align: center; padding: 20px;">
+    <div class="header-content" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+        <img src="images/imagetitle1.jpg" alt="Pakistan Flag" style="width: 250px; height: auto;">
+        <div>
+          <h1 style="color: white; margin: 0;">Islamic Republic of Pakistan</h1>
             <p class="subtitle">The Heart of South Asia</p>
         </div>
-    </header>
+    </div>
+</header>
 
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About Pakistan</a></li>
-            <li><a href="activities.html">Activities</a></li>
-            <li><a href="locations.html">Important Locations</a></li>
+            <li><a href="https://tourism.gov.pk/index.php">Home</a></li>
+            <li><a href="https://tourism.gov.pk/pakistan.html">About Pakistan</a></li>
+            <li><a href="https://www.tripadvisor.com/Attractions-g293959-Activities-Pakistan.html">Things to do</a></li>
+            <li><a href="https://www.lonelyplanet.com/articles/best-places-to-visit-in-pakistan">Important Locations</a></li>
         </ul>
     </nav>
 </body>
 </html>
+<main>
+  <section id="geography" class="content-section">
+      <div class="section-header">
+        <div style="border-top: 2px dotted green; margin: 20px 0;"></div>
+          <h2>About Geography of Pakistan</h2>
+          <div class="flag-line"></div>
+      </div>
+      <div class="content-grid">
+          <div class="content-text">
+              <p>Pakistan is strategically located in <strong>South Asia</strong>, bordered by:</p>
+              <ul class="styled-list">
+                  <li><strong>India</strong> to the east.</li>
+                  <li><strong>Afghanistan</strong> and <strong>Iran</strong> to the west.</li>
+                  <li><strong>China</strong> to the north.</li>
+                  <li>The <strong>Arabian Sea</strong> to the south.</li>
+              </ul>
+              <p>The country features one of the world's most diverse landscapes, ranging from the soaring peaks of the Karakoram to the golden beaches along the Arabian Sea.</p>
+          </div>
+          <div class="content-image">
+              <img src="images/pakistanmap.jpg" alt="Map of Pakistan showing geographical features" loading="lazy">
+              <p class="image-caption">Geographical map of Pakistan showing varied terrain</p>
+          </div>
+      </div>
+  </section>
+  <div style="border-top: 2px dotted green; margin: 20px 0;"></div>
+  <section id="cultural-significance" class="content-section alt-bg">
+      <div class="section-header">
+          <h2>Cultural Significance</h2>
+          <div class="flag-line"></div>
+      </div>
+      <div class="content-grid reversed">
+          <div class="content-text">
+              <p>Pakistan's culture is a <strong>rich tapestry</strong> woven from:</p>
+              <ol class="styled-list">
+                  <li>Ancient Indus Valley Civilization (3300-1300 BCE)</li>
+                  <li>Gandhara Buddhist heritage</li>
+                  <li>Islamic influences dating back to the 8th century</li>
+                  <li>Mughal Empire's architectural and artistic legacy</li>
+                  <li>British colonial period influences</li>
+              </ol>
+              <p>This unique blend creates a cultural experience unlike any other in the world.</p>
+          </div>
+          <div class="content-image">
+              <img src="images/lahorefort.jpg" alt="Lahore Fort showcasing Mughal architecture" loading="lazy">
+              <p class="image-caption">Lahore Fort - A UNESCO World Heritage Site</p>
+          </div>
+      </div>
+  </section>
+  <div style="border-top: 2px dotted green; margin: 20px 0;"></div>
+  <section id="famous-for" class="card-section">
+      <h2>What Pakistan is Famous For</h2>
+      <div class="card-container">
+          <div class="feature-card">
+              <div class="card-header mountain">
+                  <h3>Mountain Peaks</h3>
+              </div>
+              <div class="card-body">
+                  <p>Pakistan is home to:</p>
+                  <ul>
+                      <li>K2 - World's 2nd highest peak.</li>
+                      <li>Five of the world's 14 eight-thousanders.</li>
+                      <li>The world's highest concentration of high mountains.</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="feature-card">
+              <div class="card-header heritage">
+                  <h3>Historical Heritage</h3>
+              </div>
+              <div class="card-body">
+                  <p>UNESCO World Heritage Sites:</p>
+                  <ul>
+                      <li>Mohenjo-Daro</li>
+                      <div class="content-image">
+                      <img src="images/mohenjodaro.jpg" alt="Map of Pakistan showing geographical features" loading="lazy">
+                      <p class="image-caption">Mohenjo-Daro is an archaeological site in Sindh, Pakistan, built in 2500 BCE. Mohenjo-Daro is primarily known for being one of the largest and best-preserved cities of the Indus Valley Civilization, and for its advanced urban planning and engineering. The site's sophisticated infrastructure, including organized drainage systems, sewage systems, and public baths, are particularly notable.</p>
+                      </div>
+
+                      <li>Taxila</li>
+                      <div class="content-image">
+                        <img src="images/taxila.jpg" alt="Map of Pakistan showing geographical features" loading="lazy">
+                        <p class="image-caption">Taxila, located in the Rawalpindi district of Pakistan's Punjab province, is a vast serial site that includes a Mesolithic cave and the archaeological remains of four early settlement sites, Buddhist monasteries, and a Muslim mosque and madrassa.</p>
+                      </div>
+                      <li>Shalimar Gardens</li>
+                      <div class="content-image">
+                        <img src="images/shalimargardens.jpg" alt="Map of Pakistan showing geographical features" loading="lazy">
+                        <p class="image-caption">The Shalimar Gardens is well known for chini khanas, or arched niches, behind garden waterfalls. They are a unique feature in the Bagh. These niches were lighted at night with oil lamps, which gave a fairy tale appearance to the water falls.</p>
+                      </div>
+                      <li>Makli Necropolis</li>
+                      <div class="content-image">
+                        <img src="images/maklinecropolis.jpg" alt="Map of Pakistan showing geographical features" loading="lazy">
+                        <p class="image-caption">Makli Necropolis is located in the town of Makli, which is located on a plateau approximately 6 kilometres from the city of Thatta, the capital of lower Sindh until the 17th century. The vast necropolis of Makli is among the largest in the world. Kings, queens, governors, saints, scholars, and philosophers are buried here in brick or stone monuments, some of which are lavishly decorated with glazed tiles.</p>
+                  </ul>
+              </div>
+          </div>
+          

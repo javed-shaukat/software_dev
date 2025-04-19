@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Performance Bikes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .bike-header {
+            background: linear-gradient(135deg, #ff4d4d, #333333);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        .bike-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        .bike-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .sport-bike {
+            border-left-color: #dc3545;
+        }
+        .naked-bike {
+            border-left-color: #fd7e14;
+        }
+        .adventure-bike {
+            border-left-color: #20c997;
+        }
+        .bike-img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="bike-header text-center">
+        <h1 class="display-4 fw-bold">World's Top Performance Bikes</h1>
+        <p class="lead">Engineering marvels on two wheels</p>
+    </div>
+   
+    <div class="container mb-5">
+        <div class="list-group">
+            <!-- Sport Bike -->
+            <div class="list-group-item bike-card sport-bike">
+                <div class="d-flex align-items-center">
+                    <img src="images/Kawasaki-H2R-41.jpg" alt="Kawasaki Ninja H2R" class="img-thumbnail me-3 bike-img">
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="mb-1 text-danger">Kawasaki Ninja H2R</h5>
+                            <div>
+                                <span class="badge bg-danger me-1">Track Only</span>
+                                <span class="badge bg-dark">Supercharged</span>
+                            </div>
+                        </div>
+                        <p class="mb-1">The street-legal version of Kawasaki's supercharged beast with 310 hp and mind-bending acceleration.</p>
+                        <div class="d-flex justify-content-between">
+                            <small class="text-muted">0-60 mph: 2.5s | Top Speed: 249+ mph</small>
+                            <small class="text-danger fw-bold">$55,000</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Naked Bike -->
+            <div class="list-group-item bike-card naked-bike">
+                <div class="d-flex align-items-center">
+                    <img src="images/Ducati-Streetfighter-V4-Lamborghini-Motorcycle.jpg" alt="Ducati Streetfighter V4" class="img-thumbnail me-3 bike-img">
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="mb-1 text-warning">Ducati Streetfighter V4</h5>
+                            <div>
+                                <span class="badge bg-warning text-dark me-1">Naked</span>
+                                <span class="badge bg-danger">208 HP</span>
+                            </div>
+                        </div>
+                        <p class="mb-1">The stripped-down version of Ducati's Panigale V4 with aggressive styling and brutal power delivery.</p>
+                        <div class="d-flex justify-content-between">
+                            <small class="text-muted">0-60 mph: 2.8s | Top Speed: 186 mph</small>
+                            <small class="text-warning fw-bold">$21,995</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Adventure Bike -->
+            <div class="list-group-item bike-card adventure-bike">
+                <div class="d-flex align-items-center">
+                    <img src="images/BMW-R-1200-GSADV-web.jpg" alt="BMW R 1250 GS Adventure" class="img-thumbnail me-3 bike-img">
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="mb-1 text-success">BMW R 1250 GS Adventure</h5>
+                            <div>
+                                <span class="badge bg-success me-1">Adventure</span>
+                                <span class="badge bg-primary">Shift-Cam</span>
+                            </div>
+                        </div>
+                        <p class="mb-1">The ultimate adventure bike with BMW's variable valve timing boxer engine and legendary off-road capability.</p>
+                        <div class="d-flex justify-content-between">
+                            <small class="text-muted">0-60 mph: 3.6s | Range: 300+ miles</small>
+                            <small class="text-success fw-bold">$20,645</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="mt-4 p-3 bg-light rounded">
+            <h6 class="text-center text-uppercase text-muted">Bike Categories</h6>
+            <div class="d-flex justify-content-around text-center mt-3">
+                <div>
+                    <span class="badge bg-danger rounded-pill">Sport</span>
+                    <div class="small mt-1">Aerodynamic</div>
+                </div>
+                <div>
+                    <span class="badge bg-warning rounded-pill text-dark">Naked</span>
+                    <div class="small mt-1">Street Focused</div>
+                </div>
+                <div>
+                    <span class="badge bg-success rounded-pill">Adventure</span>
+                    <div class="small mt-1">All-Terrain</div>
+                </div>
+                <div>
+                    <span class="badge bg-primary rounded-pill">Touring</span>
+                    <div class="small mt-1">Long-Distance</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
