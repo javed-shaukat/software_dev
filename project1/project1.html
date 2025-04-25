@@ -3,161 +3,971 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Pakistan - Discover Pakistan</title>
-    <link rel="stylesheet" href="project1style.css">
+    <title>Explore Pakistan - Land of Adventure & Culture</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
     <style>
-      
-        /* Add styles for tabs */
-        nav ul {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            background-color: #f4f4f4;
-            border-bottom: 2px solid #ccc;
+        :root {
+            --primary-green: #046A38;
+            --secondary-green: #01411C;
+            --accent-white: #FFFFFF;
+            --accent-gold: #FFD700;
+            --text-dark: #333333;
+            --text-light: #F8F9FA;
         }
-
-        nav ul li {
-            margin: 0;
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
         }
-
-        nav ul li a {
-            display: block;
-            padding: 10px 20px;
+        
+        /* Header Styles */
+        .navbar {
+            background-color: var(--primary-green);
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--accent-white);
+        }
+        
+        .navbar-brand span {
+            color: var(--accent-gold);
+        }
+        
+        .nav-link {
+            color: var(--accent-white);
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Carousel */
+        .hero-carousel {
+            height: 80vh;
+            overflow: hidden;
+        }
+        
+        .carousel-item {
+            height: 80vh;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .carousel-caption {
+            background-color: rgba(4, 106, 56, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            bottom: 100px;
+        }
+        
+        .carousel-caption h5 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .carousel-caption p {
+            font-size: 1.2rem;
+            animation: fadeIn 2s ease;
+        }
+        
+        /* Section Styles */
+        .section-title {
+            color: var(--primary-green);
+            position: relative;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-gold);
+        }
+        
+        /* Card Styles */
+        .destination-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .destination-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .destination-card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .card-title {
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+        
+        .btn-explore {
+            background-color: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-explore:hover {
+            background-color: var(--secondary-green);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(4, 106, 56, 0.3);
+        }
+        
+        /* Animation Styles */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Feature Section */
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-green);
+            color: var(--accent-white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-title {
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-gold);
+        }
+        
+        .footer-links a {
+            color: var(--accent-white);
             text-decoration: none;
-            color: #333;
-            border: 1px solid transparent;
-            border-bottom: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
         }
         
-            nav ul li a.active {
-        background-color: green; /* Set background color to green */
-        border: 1px solid #ccc;
-        border-bottom: 2px solid green; /* Match the bottom border with the background */
-        color: white; /* Set text color to white for better contrast */
-    }
-
-    nav ul li a:hover {
-        background-color: green;
-        color: #000;
-    }         
+        .footer-links a:hover {
+            color: var(--accent-gold);
+            padding-left: 5px;
+        }
         
+        .social-icons a {
+            color: var(--accent-white);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-carousel, .carousel-item {
+                height: 60vh;
+            }
+            
+            .carousel-caption {
+                bottom: 50px;
+            }
+            
+            .carousel-caption h5 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-carousel, .carousel-item {
+                height: 50vh;
+            }
+            
+            .carousel-caption {
+                bottom: 20px;
+                padding: 10px;
+            }
+            
+            .carousel-caption h5 {
+                font-size: 1.5rem;
+            }
+            
+            .carousel-caption p {
+                font-size: 1rem;
+                display: none;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-carousel, .carousel-item {
+                height: 40vh;
+            }
+            
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
-  <header style="background-color: green; color: white; text-align: center; padding: 20px;">
-    <div class="header-content" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-        <img src="images/imagetitle1.jpg" alt="Pakistan Flag" style="width: 250px; height: auto;">
-        <div>
-          <h1 style="color: white; margin: 0;">Islamic Republic of Pakistan</h1>
-            <p class="subtitle">The Heart of South Asia</p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Explore <span>Pakistan</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#destinations">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#activities">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cuisine">Cuisine</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <section id="home">
+        <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('images/beauty\ of\ pakistan.jpg');">
+                    <div class="carousel-caption text-center">
+                        <h5>Discover the Beauty of Pakistan</h5>
+                        <p>From majestic mountains to vibrant cities, experience it all</p>
+                        <a href="#destinations" class="btn btn-explore pulse-animation">Explore Now</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('images/fairy\ meadows.jpg');">
+                    <div class="carousel-caption text-center">
+                        <h5>Land of Adventure</h5>
+                        <p>Trekking, mountaineering, and breathtaking landscapes await you</p>
+                        <a href="#activities" class="btn btn-explore pulse-animation">Find Activities</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('images/rich\ culture.png');">
+                    <div class="carousel-caption text-center">
+                        <h5>Rich Cultural Heritage</h5>
+                        <p>Explore ancient civilizations and vibrant traditions</p>
+                        <a href="#about" class="btn btn-explore pulse-animation">Learn More</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('images/divine\ cuisine.jpg'); background-position: center 30%;">
+                    <div class="carousel-caption text-center">
+                            <h5>Flavors of Pakistan</h5>
+                            <p>Discover the rich and diverse culinary traditions</p>
+                            <a href="#cuisine" class="btn btn-explore pulse-animation">Taste Now</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">About Pakistan</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="images/himaliyans mountains.jpg" alt="Pakistan Landscape" class="img-fluid rounded shadow" style="border: 5px solid var(--accent-white); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">The Land of Contrasts</h3>
+                    <p>Pakistan is a country of remarkable diversity, from the soaring peaks of the Karakoram and Himalayan mountain ranges to the vast deserts of Sindh and Punjab. It's a land where ancient civilizations thrived, leaving behind a rich cultural heritage that continues to fascinate visitors.</p>
+                    <p>The country is home to some of the world's highest mountains, including K2, the second-highest peak on Earth. Its northern areas are often called the "Paradise on Earth" for their breathtaking natural beauty.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="text-center">
+                                <i class="fas fa-mountain feature-icon"></i>
+                                <h5>Mountain Peaks</h5>
+                                <p>Home to 5 of the 14 eight-thousanders</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="text-center">
+                                <i class="fas fa-archway feature-icon"></i>
+                                <h5>UNESCO Sites</h5>
+                                <p>6 World Heritage Sites</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Popular Destinations</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card destination-card">
+                        <img src="images/hunza valley.jpg" class="card-img-top" alt="Hunza Valley">
+                        <div class="card-body">
+                            <h5 class="card-title">Hunza Valley</h5>
+                            <p class="card-text">Known for its stunning landscapes, friendly people, and the majestic Rakaposhi mountain.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal" data-bs-target="#hunzaModal">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card destination-card">
+                        <img src="images/lahorefort.jpg" class="card-img-top" alt="Lahore Fort">
+                        <div class="card-body">
+                            <h5 class="card-title">Lahore Fort</h5>
+                            <p class="card-text">A UNESCO World Heritage Site showcasing Mughal architecture at its finest.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal" data-bs-target="#lahoreModal">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card destination-card">
+                        <img src="images/fairy meadows.jpg" class="card-img-top" alt="Fairy Meadows">
+                        <div class="card-body">
+                            <h5 class="card-title">Fairy Meadows</h5>
+                            <p class="card-text">A lush green plateau at the base of Nanga Parbat, offering spectacular views.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal" data-bs-target="#fairyModal">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Things To Do</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Adventure Activities</h3>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item">
+                            <i class="fas fa-hiking me-2"></i>
+                            <a href="https://www.britannica.com/place/Karakoram-Range" target="_blank" class="text-decoration-none">
+                                Trekking in the Karakoram Mountains.
+                                <i class="fas fa-external-link-alt ms-2"></i>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-mountain me-2"></i>
+                            <a href="https://madisonmountaineering.com/expedition/k2/" target="_blank" class="text-decoration-none">
+                                Mountaineering expeditions to K2.
+                                <i class="fas fa-external-link-alt ms-2"></i>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-water me-2"></i>
+                            <a href="https://study.com/academy/lesson/indus-river-definition-location-facts.html" target="_blank" class="text-decoration-none">
+                                White water rafting in the Indus River.
+                                <i class="fas fa-external-link-alt ms-2"></i>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-campground me-2"></i>
+                            <a href="https://trulypakistan.net/camping-spots-in-pakistan/" target="_blank" class="text-decoration-none">
+                                Camping in the nature.
+                                <i class="fas fa-external-link-alt ms-2"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Cultural Experiences</h3>
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item">
+                            <a href="https://www.harappa.com/slideshows/mohenjo-daro" target="_blank" class="text-decoration-none">
+                                Explore ancient Mohenjo-Daro ruins.
+                                <i class="fas fa-external-link-alt ms-2"></i>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="https://visitlahore.com/attractions/badshahi-mosque/" target="_blank" class="text-decoration-none">
+                                Visit the Badshahi Mosque in Lahore City.
+                                <i class="fas fa-external-link-alt ms-2"></i>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="https://worldmusic.net/blogs/guide-to-world-music/pakistan-north-india-sufi-music-songs-of-praise" target="_blank" class="text-decoration-none">
+                                Attend a Sufi music performance.
+                                <i class="fas fa-external-link-alt ms-2"></i>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="https://travelpakistani.com/landmark/details/qissa-khwani-bazaar/183" target="_blank" class="text-decoration-none">
+                                Shop in Peshawar's Qissa Khwani Bazaar.
+                                <i class="fas fa-external-link-alt ms-2"></i>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <h4 class="card-title text-center mb-4">Tourist Information</h4>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>Best Time to Visit</th>
+                                            <th>Visa Requirements</th>
+                                            <th>Currency</th>
+                                            <th>Languages</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>March-May & September-November</td>
+                                            <td>Visa on arrival for many countries</td>
+                                            <td>Pakistani Rupee (PKR)</td>
+                                            <td>Urdu (official), English, regional languages</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <div class="row">
+        <!-- Food Category 1 -->
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <img src="images/biryani.jpg" class="card-img-top" alt="Biryani">
+                <div class="card-body">
+                    <h4 class="card-title text-center">Rice Dishes</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Biryani
+                            <span class="badge bg-primary rounded-pill">Spicy</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Pulao
+                            <span class="badge bg-success rounded-pill">Mild</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Tahiri
+                            <span class="badge bg-success rounded-pill">Vegetarian</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <!-- Food Category 2 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Karahi">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Meat Specialties</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Karahi
+                                <span class="badge bg-primary rounded-pill">Spicy</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Nihari
+                                <span class="badge bg-primary rounded-pill">Spicy</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Seekh Kebabs
+                                <span class="badge bg-warning rounded-pill">Grilled</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Food Category 3 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="images/sweets.jpg" class="card-img-top" alt="Sweets">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Sweets & Desserts</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Gulab Jamun
+                                <span class="badge bg-danger rounded-pill">Sweet</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Jalebi
+                                <span class="badge bg-danger rounded-pill">Sweet</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Kheer
+                                <span class="badge bg-danger rounded-pill">Sweet</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Regional Specialties</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Region</th>
+                                        <th>Specialty</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Punjab</td>
+                                        <td>Sarson ka Saag, Makki ki Roti</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sindh</td>
+                                        <td>Sai Bhaji, Sindhi Biryani</td>
+                                    </tr>
+                                    <tr>
+                                        <td>KPK</td>
+                                        <td>Chapli Kebab, Peshawari Naan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balochistan</td>
+                                        <td>Sajji, Kaak Bread</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Must-Try Street Foods</h4>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Gol Gappay (Panipuri)
+                                <span class="badge bg-info rounded-pill">Popular</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Bun Kebab
+                                <span class="badge bg-info rounded-pill">Popular</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Dahi Bhallay
+                                <span class="badge bg-info rounded-pill">Popular</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Samosa Chaat
+                                <span class="badge bg-info rounded-pill">Popular</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Shawarma
+                                <span class="badge bg-info rounded-pill">Popular</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <button class="btn btn-explore" data-bs-toggle="collapse" data-bs-target="#foodTips">
+                <i class="fas fa-utensils me-2"></i> Pakistani Dining Etiquette Tips
+            </button>
+            <div id="foodTips" class="collapse mt-3">
+                <div class="card card-body text-start">
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Traditionally, Pakistanis eat with their right hand. (left hand is considered unclean)</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> It's common to be offered second helpings - refusing politely is acceptable.</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Many meals start with dates and yogurt drinks.</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Street food is generally safe if cooked fresh in front of you.</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Complimenting the cook is considered good manners.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-</header>
+</section>
 
-    <nav>
-        <ul>
-            <li><a href="https://tourism.gov.pk/index.php">Home</a></li>
-            <li><a href="https://tourism.gov.pk/pakistan.html">About Pakistan</a></li>
-            <li><a href="https://www.tripadvisor.com/Attractions-g293959-Activities-Pakistan.html">Things to do</a></li>
-            <li><a href="https://www.lonelyplanet.com/articles/best-places-to-visit-in-pakistan">Important Locations</a></li>
-        </ul>
-    </nav>
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <h4 class="card-title text-center mb-4">Tourist Information</h4>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>Best Time to Visit</th>
+                                            <th>Visa Requirements</th>
+                                            <th>Currency</th>
+                                            <th>Languages</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>March-May & September-November</td>
+                                            <td>Visa on arrival for many countries</td>
+                                            <td>Pakistani Rupee (PKR)</td>
+                                            <td>Urdu (official), English, regional languages</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Traveler Experiences</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/sj.jpg" alt="Sarah" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5 class="mb-0">Sarah Johnson</h5>
+                                <small>USA</small>
+                            </div>
+                        </div>
+                        <p>"The hospitality in Pakistan is unmatched. The mountains took my breath away, but it was the people who stole my heart."</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/dm.jpg" alt="David" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5 class="mb-0">David Müller</h5>
+                                <small>Germany</small>
+                            </div>
+                        </div>
+                        <p>"As an adventure seeker, Pakistan offered everything I could ask for - challenging treks, stunning views, and authentic experiences."</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/at.jpg" alt="Aisha" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5 class="mb-0">Aisha Tanaka</h5>
+                                <small>Japan</small>
+                            </div>
+                        </div>
+                        <p>"The cultural heritage sites are incredibly preserved. The food was a delightful journey of flavors I'll never forget."</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Plan Your Trip</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="interest" class="form-label">Interest</label>
+                            <select class="form-select" id="interest">
+                                <option selected>Select your interest</option>
+                                <option>Adventure Tourism</option>
+                                <option>Cultural Tourism</option>
+                                <option>Religious Tourism</option>
+                                <option>Food Tourism</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-explore">Submit</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Contact Information</h4>
+                            <p><i class="fas fa-map-marker-alt me-3"></i> Pakistan Tourism Development Corporation, Islamabad, Pakistan</p>
+                            <p><i class="fas fa-phone me-3"></i> +92 51 111 222 333</p>
+                            <p><i class="fas fa-envelope me-3"></i> info@tourism.gov.pk</p>
+                            <hr>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Explore Pakistan</h5>
+                    <p>Your gateway to discovering the breathtaking landscapes, rich culture, and warm hospitality of Pakistan.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/PakistanTourismDevelopmentCorporation/" target="_blank" class="facebook-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/TourismGovPK" target="_blank" class="twitter-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/discover.pakistan/" target="_blank" class="instagram-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/c/PakistanTourismOfficial" target="_blank" class="youtube-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About Pakistan</a>
+                        <a href="#destinations">Destinations</a>
+                        <a href="#activities">Activities</a>
+                        <a href="#contact">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p>Subscribe to our newsletter for travel tips and special offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-explore" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center copyright">
+                <p class="mb-0">&copy; 2025 Explore Pakistan by Javed Shaukat.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Destination Modals -->
+    <!-- Hunza Valley Modal -->
+    <div class="modal fade" id="hunzaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Hunza Valley</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/hunza valley.jpg" class="img-fluid mb-3" alt="Hunza Valley">
+                    <p>The Hunza Valley is a mountainous valley in the Gilgit-Baltistan region of Pakistan. It is known for its stunning scenery, including views of Rakaposhi (7,788 m), Ultar Sar (7,388 m), Bojahagur Duanasir II (7,329 m), Ghenta Peak (7,090 m), Hunza Peak (6,270 m), Darmyani Peak (6,090 m), and Bublimating (Ladyfinger Peak) (6,000 m).</p>
+                    <p>The valley is also home to the ancient Baltit Fort and Altit Fort, which are UNESCO World Heritage Sites. The local people, known as Hunzakuts, are famous for their longevity and hospitality.</p>
+                    <h6>Best Time to Visit:</h6>
+                    <p>April to October offers the best weather for visiting Hunza Valley.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-explore" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lahore Fort Modal -->
+    <div class="modal fade" id="lahoreModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Lahore Fort</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/lahorefort.jpg" class="img-fluid mb-3" alt="Lahore Fort">
+                    <p>The Lahore Fort is a citadel in the city of Lahore, Punjab, Pakistan. The fortress is located at the northern end of walled city Lahore, and spreads over an area greater than 20 hectares. It contains 21 notable monuments, some of which date to the era of Emperor Akbar.</p>
+                    <p>The Lahore Fort is notable for having been almost entirely rebuilt in the 17th century, when the Mughal Empire was at the height of its splendor and opulence. The architecture of the fort reflects the architectural styles of the Mughals and the later Sikh and British occupants.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Sheesh Mahal (Palace of Mirrors)</li>
+                        <li>Alamgiri Gate</li>
+                        <li>Naulakha Pavilion</li>
+                        <li>Moti Masjid (Pearl Mosque)</li>
+                    </ul>
+                    <h6>Best Time to Visit:</h6>
+                    <p>From January to December offers the best weather for visiting Lahore City.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-explore" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fairy Meadows Modal -->
+    <div class="modal fade" id="fairyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Fairy Meadows</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/fairy meadows.jpg" class="img-fluid mb-3" alt="Fairy Meadows">
+                    <p>Fairy Meadows is a grassland near one of the base camp sites of the Nanga Parbat, located in Diamer District, Gilgit-Baltistan, Pakistan. At an altitude of about 3,300 meters above sea level, it serves as a launching point for trekkers summiting on the Rakhiot face of the Nanga Parbat.</p>
+                    <p>The grassland is named by German climbers and is locally known as Joot. In 1995, the Government of Pakistan declared Fairy Meadows a National Park. The area is covered with dense pine forests and is one of the most beautiful places in Pakistan.</p>
+                    <h6>Activities:</h6>
+                    <ul>
+                        <li>Trekking to Nanga Parbat Base Camp</li>
+                        <li>Camping under starry skies</li>
+                        <li>Photography of breathtaking landscapes</li>
+                        <li>Wildlife spotting</li>
+                    </ul>
+                    <h6>Best Time to Visit:</h6>
+                    <p>From March to November offers the best weather for visiting the Fairy Meadows.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-explore" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-<main>
-  <section id="geography" class="content-section">
-      <div class="section-header">
-        <div style="border-top: 2px dotted green; margin: 20px 0;"></div>
-          <h2>About Geography of Pakistan</h2>
-          <div class="flag-line"></div>
-      </div>
-      <div class="content-grid">
-          <div class="content-text">
-              <p>Pakistan is strategically located in <strong>South Asia</strong>, bordered by:</p>
-              <ul class="styled-list">
-                  <li><strong>India</strong> to the east.</li>
-                  <li><strong>Afghanistan</strong> and <strong>Iran</strong> to the west.</li>
-                  <li><strong>China</strong> to the north.</li>
-                  <li>The <strong>Arabian Sea</strong> to the south.</li>
-              </ul>
-              <p>The country features one of the world's most diverse landscapes, ranging from the soaring peaks of the Karakoram to the golden beaches along the Arabian Sea.</p>
-          </div>
-          <div class="content-image">
-              <img src="images/pakistanmap.jpg" alt="Map of Pakistan showing geographical features" loading="lazy">
-              <p class="image-caption">Geographical map of Pakistan showing varied terrain</p>
-          </div>
-      </div>
-  </section>
-  <div style="border-top: 2px dotted green; margin: 20px 0;"></div>
-  <section id="cultural-significance" class="content-section alt-bg">
-      <div class="section-header">
-          <h2>Cultural Significance</h2>
-          <div class="flag-line"></div>
-      </div>
-      <div class="content-grid reversed">
-          <div class="content-text">
-              <p>Pakistan's culture is a <strong>rich tapestry</strong> woven from:</p>
-              <ol class="styled-list">
-                  <li>Ancient Indus Valley Civilization (3300-1300 BCE)</li>
-                  <li>Gandhara Buddhist heritage</li>
-                  <li>Islamic influences dating back to the 8th century</li>
-                  <li>Mughal Empire's architectural and artistic legacy</li>
-                  <li>British colonial period influences</li>
-              </ol>
-              <p>This unique blend creates a cultural experience unlike any other in the world.</p>
-          </div>
-          <div class="content-image">
-              <img src="images/lahorefort.jpg" alt="Lahore Fort showcasing Mughal architecture" loading="lazy">
-              <p class="image-caption">Lahore Fort - A UNESCO World Heritage Site</p>
-          </div>
-      </div>
-  </section>
-  <div style="border-top: 2px dotted green; margin: 20px 0;"></div>
-  <section id="famous-for" class="card-section">
-      <h2>What Pakistan is Famous For</h2>
-      <div class="card-container">
-          <div class="feature-card">
-              <div class="card-header mountain">
-                  <h3>Mountain Peaks</h3>
-              </div>
-              <div class="card-body">
-                  <p>Pakistan is home to:</p>
-                  <ul>
-                      <li>K2 - World's 2nd highest peak.</li>
-                      <li>Five of the world's 14 eight-thousanders.</li>
-                      <li>The world's highest concentration of high mountains.</li>
-                  </ul>
-              </div>
-          </div>
-          <div class="feature-card">
-              <div class="card-header heritage">
-                  <h3>Historical Heritage</h3>
-              </div>
-              <div class="card-body">
-                  <p>UNESCO World Heritage Sites:</p>
-                  <ul>
-                      <li>Mohenjo-Daro</li>
-                      <div class="content-image">
-                      <img src="images/mohenjodaro.jpg" alt="Map of Pakistan showing geographical features" loading="lazy">
-                      <p class="image-caption">Mohenjo-Daro is an archaeological site in Sindh, Pakistan, built in 2500 BCE. Mohenjo-Daro is primarily known for being one of the largest and best-preserved cities of the Indus Valley Civilization, and for its advanced urban planning and engineering. The site's sophisticated infrastructure, including organized drainage systems, sewage systems, and public baths, are particularly notable.</p>
-                      </div>
 
-                      <li>Taxila</li>
-                      <div class="content-image">
-                        <img src="images/taxila.jpg" alt="Map of Pakistan showing geographical features" loading="lazy">
-                        <p class="image-caption">Taxila, located in the Rawalpindi district of Pakistan's Punjab province, is a vast serial site that includes a Mesolithic cave and the archaeological remains of four early settlement sites, Buddhist monasteries, and a Muslim mosque and madrassa.</p>
-                      </div>
-                      <li>Shalimar Gardens</li>
-                      <div class="content-image">
-                        <img src="images/shalimargardens.jpg" alt="Map of Pakistan showing geographical features" loading="lazy">
-                        <p class="image-caption">The Shalimar Gardens is well known for chini khanas, or arched niches, behind garden waterfalls. They are a unique feature in the Bagh. These niches were lighted at night with oil lamps, which gave a fairy tale appearance to the water falls.</p>
-                      </div>
-                      <li>Makli Necropolis</li>
-                      <div class="content-image">
-                        <img src="images/maklinecropolis.jpg" alt="Map of Pakistan showing geographical features" loading="lazy">
-                        <p class="image-caption">Makli Necropolis is located in the town of Makli, which is located on a plateau approximately 6 kilometres from the city of Thatta, the capital of lower Sindh until the 17th century. The vast necropolis of Makli is among the largest in the world. Kings, queens, governors, saints, scholars, and philosophers are buried here in brick or stone monuments, some of which are lavishly decorated with glazed tiles.</p>
-                  </ul>
-              </div>
-          </div>
-          
