@@ -201,7 +201,6 @@ print(f"the new color is =        {new_color}")
 #new_word = colors[1] + numbers[2] #--> type error
 #print(f"The new word is         {new_word}")
 
-
 print('\n ------ Example 21: remove items from a list ------')
 # remove the 2nd last color
 colors.pop(-2)
